@@ -15,7 +15,19 @@ public class AutoCapacityArray<T> {
     }
 
     public void add(T obj){
-        int currSize = this.size;
-        
+        if(this.count == this.size){
+
+        }
+
+    }
+
+    public void autoCapacity(){
+        Object [] newArray = new Object[this.size * 2];
+        int count = this.count;
+        this.count = 0;
+        for (int i=0; i<count; i++){
+            newArray[i] = this.array[i];
+            count++;
+        }
     }
 }

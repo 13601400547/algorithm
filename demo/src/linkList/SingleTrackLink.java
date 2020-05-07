@@ -10,6 +10,14 @@ public class SingleTrackLink<T> {
 
     private SingleTrackNode<T> last;
 
+    public void getFirst(){
+
+    }
+
+    public void getLast(){
+
+    }
+
     public void add(){
 
     }

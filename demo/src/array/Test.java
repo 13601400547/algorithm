@@ -3,8 +3,7 @@ package array;
 public class Test {
 
     public static void  main(String [] args){
-        Test t1 = new Test();
-        t1.testAutoCapacityArray();
+
     }
 
     public void testAutoCapacityArray(){
@@ -31,4 +30,11 @@ public class Test {
         }
         System.out.println(arrayList.getSize());
     }
+
+    public void mergeTwoSortArray(int [] a, int [] b){
+        if (a != null && b != null){
+
+        }
+    }
+
 }

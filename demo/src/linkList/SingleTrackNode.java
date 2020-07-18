@@ -6,6 +6,15 @@ public class SingleTrackNode<T> {
 
     private T obj;
 
+    public SingleTrackNode(T obj){
+        this.obj = obj;
+    }
+
+    public SingleTrackNode(SingleTrackNode next, T obj){
+        this.next = next;
+        this.obj = obj;
+    }
+
     public SingleTrackNode getNext() {
         return next;
     }

@@ -4,17 +4,17 @@ import java.util.Arrays;
 
 public class Permutation {
 
-    public void perm(int [] array, int index, int length){
-        if (index == length){
+    public void perm(int [] array, int start, int end){
+        if (start == end){
             System.out.println(Arrays.toString(array));
         }
-        for (int i=index;i<=length;i++){
-            if (!judgeSwap(array, index,i)){
+        for (int i=start;i<=end;i++){
+            if (!judgeSwap(array, start,i)){
                 continue;
             }
-            swap(array, index, i);
-            perm(array, index+1, length);
-            swap(array, index, i);
+            swap(array, start, i);
+            perm(array, start+1, end);
+            swap(array, start, i);
         }
     }
 
@@ -24,13 +24,19 @@ public class Permutation {
         array[y] = tmp;
     }
 
-    public boolean judgeSwap(int [] array, int index, int i){
-        for (int j=index; j<i;j++){
+    public boolean judgeSwap(int [] array, int start, int i){
+        for (int j=start; j<i;j++){
             if (array[j] == array[i]){
                 return false;
             }
         }
         return true;
+    }
+
+    public static void main(String [] args){
+        Permutation perm = new Permutation();
+        int [] array = {4,2,2, 4};
+        perm.perm(array, 0, 3);
     }
 
 }
